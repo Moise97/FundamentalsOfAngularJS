@@ -1,11 +1,11 @@
 angular.module("MainApp", [])
-.controller("todayCtrl", function($scope){
+.controller("todayCtrl", function($scope, days){
 
-    $scope.today = new Date().getDay() % 7;
+    $scope.today = days.today;
 
 })
-.controller("tomorrowCtrl", function($scope){
+.controller("tomorrowCtrl", function($scope, days){
 
-    $scope.tomorrow = (new Date().getDay() + 1) % 7;
+    $scope.tomorrow = days.tomorrow;
 
 })
