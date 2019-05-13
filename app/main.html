@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+    <head>
+        <title>AngularJS</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-theme.css">
+        <script src="../node_modules/angular/angular.js"></script>
+
+        <script src="app/controllers/dayController.js"></script>
+    </head>
+    <body>
+        <div class="panel" ng-controller="dayCtrl">
+            <div class="page-header">
+                <h3>FundamentalsOfAngularJS App</h3>
+            </div>
+            <h4>Today is {{ day || "(unknown)" }}</h4>
+        </div>
+    </body>
+</html>
