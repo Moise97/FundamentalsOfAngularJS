@@ -8,13 +8,14 @@
         <script src="../node_modules/angular/angular.js"></script>
 
         <script src="app/controllers/dayController.js"></script>
+        <script src="app/directives/highlightDirective.js"></script>
     </head>
     <body>
         <div class="panel">
             <div class="page-header">
                 <h3>FundamentalsOfAngularJS App</h3>
             </div>
-            <h4 ng-controller="todayCtrl">Today is {{ today || "(unknown)" }}</h4>
+            <h4 ng-controller="todayCtrl" highlight="Tuesday">Today is {{ today || "(unknown)" }}</h4>
             <h4 ng-controller="tomorrowCtrl">Tomorrow is {{ tomorrow || "(unknown)" }}</h4>
         </div>
     </body>
