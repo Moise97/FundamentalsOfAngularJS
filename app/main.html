@@ -10,11 +10,12 @@
         <script src="app/controllers/dayController.js"></script>
     </head>
     <body>
-        <div class="panel" ng-controller="dayCtrl">
+        <div class="panel">
             <div class="page-header">
                 <h3>FundamentalsOfAngularJS App</h3>
             </div>
-            <h4>Today is {{ day || "(unknown)" }}</h4>
+            <h4 ng-controller="todayCtrl">Today is {{ today || "(unknown)" }}</h4>
+            <h4 ng-controller="tomorrowCtrl">Tomorrow is {{ tomorrow || "(unknown)" }}</h4>
         </div>
     </body>
 </html>
