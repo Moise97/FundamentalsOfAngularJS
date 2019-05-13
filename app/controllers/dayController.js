@@ -1,15 +1,11 @@
 angular.module("MainApp", [])
 .controller("todayCtrl", function($scope){
 
-    let dayNames = [ "Sunday", "Monday", "Tuesday", "Wednesday", 
-                    "Thursday", "Friday", "Saturday" ];
+    $scope.today = new Date().getDay() % 7;
 
-    $scope.today = dayNames[(new Date().getDay()) % 7];
 })
 .controller("tomorrowCtrl", function($scope){
 
-    let dayNames = [ "Sunday", "Monday", "Tuesday", "Wednesday", 
-                    "Thursday", "Friday", "Saturday" ];
+    $scope.tomorrow = (new Date().getDay() + 1) % 7;
 
-    $scope.tomorrow = dayNames[(new Date().getDay() + 1) % 7];
 })

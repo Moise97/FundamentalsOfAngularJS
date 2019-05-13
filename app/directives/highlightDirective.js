@@ -1,8 +1,12 @@
 angular.module("MainApp")
-.directive("highlight", function(){
+.directive("highlight", function( $filter ){
+
+    let dayFilter = $filter("dayName");
+
     return function(scope, element, attrs){
-        if(scope.today == attrs["highlight"]){
+        if(dayFilter(scope.today) == attrs["highlight"]){
             element.css("color", "red");
         }
-    }
-})
+    };
+    
+});
